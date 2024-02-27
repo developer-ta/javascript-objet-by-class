@@ -1,0 +1,88 @@
+.liActive {
+  border: 1px solid black;
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+  margin-top: 11px;
+  font-size: large;
+  text-decoration: none;
+}
+
+li {
+  width: 13%;
+  height: 38px;
+  color: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+.content_active {
+  background-color: cornflowerblue;
+  margin-top: 11px;
+}
+.tab-add {
+  border-block: beige solid 1px;
+  width: 7%;
+  position: absolute;
+  top: 4%;
+  right: 7%;
+  border: 2px solid;
+  text-align: center;
+}
+.remove.icon {
+  color: red;
+  position: absolute;
+  margin-left: 3px;
+  margin-top: 10px;
+  background-color: #000;
+}
+
+.remove.icon:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #000;
+  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.remove.icon:after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #000;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.form fieldset input,
+.form fieldset .select {
+  width: 100%;
+  height: 38px;
+  color: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+}
