@@ -5,6 +5,7 @@ class Tab {
     this.main = document.querySelector(id_el);
     this.add = document.querySelector('.tab-add');
     this.ul = document.querySelector('.firstNav ul:first-child');
+    //this.removeIcon = document.querySelector('.iconefont .remove');
     this.lis = this.main.querySelectorAll('li');
     this.parentSection = this.main.querySelector('.tab-content');
     this.sections = this.main.querySelectorAll('section');
@@ -17,11 +18,15 @@ class Tab {
     for (let i = 0; i < this.lis.length; i++) {
       this.lis[i].index = i;
       this.lis[i].addEventListener('click', this.toggleTab);
+      this.removeIcon[i].addEventListener('click', this.removeTab);
+
     }
   }
   updateNode() {
     this.lis = this.main.querySelectorAll('li');
     this.sections = this.main.querySelectorAll('section');
+    this.removeIcon = document.querySelectorAll('.remove');
+
   }
   toggleTab() {
     //here this represents element Dom that call toggleTab()
@@ -47,7 +52,12 @@ class Tab {
     _newTab.parentSection.insertAdjacentHTML('beforeend', newSection);
     _newTab.init();
   }
-  removeTab() {}
+  removeTab(event) {
+    event.stopPropagation();
+    let indexParent=this.parentNode.index;
+    console.log('indexParent: ', indexParent);
+    
+  }
   editTab() {}
 }
 new Tab('#tab');
