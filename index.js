@@ -53,10 +53,13 @@ class Tab {
     _newTab.init();
   }
   removeTab(event) {
+    //this ref of el
     event.stopPropagation();
-    let indexParent=this.parentNode.index;
+    let indexParent = this.parentNode.index;
     console.log('indexParent: ', indexParent);
-    
+    _newTab.lis[indexParent].remove();
+    _newTab.sections[indexParent].remove();
+    _newTab.init();
   }
   editTab() {}
 }
